@@ -1,0 +1,322 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_gateway_line
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+".\n"
+"                            An existing official account can be linked to a\n"
+"                            Messaging API channel, you do not have to create a\n"
+"                            new account."
+msgstr ""
+"。\n"
+"                            すでにある公式アカウントを Messaging API\n"
+"                            チャネルに紐づけることもできます。新しく\n"
+"                            アカウントを作る必要はありません。"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "A carousel needs at least one column"
+msgstr "カルーセルには少なくとも 1 つのカラムが必要です"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "A column of a carousel holds at most %s actions"
+msgstr "カルーセルの 1 カラムに置けるアクションは最大 %s つです"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"An event this server could not record is only sent\n"
+"                            again if <b>Webhook redelivery</b> is turned on for\n"
+"                            the channel, on the LINE Developers console. Turn\n"
+"                            it on: an event LINE delivers twice is recognised\n"
+"                            and recorded once."
+msgstr ""
+"このサーバが記録できなかったイベントが再送されるのは、\n"
+"                            LINE Developers コンソールでそのチャネルの\n"
+"                            <b>Webhook の再送</b> をオンにしている場合だけです。\n"
+"                            オンにしてください。LINE が 2 度送ってきたイベントは\n"
+"                            識別され、1 度だけ記録されます。"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,help:mail_gateway_line.field_mail_gateway__line_api_url
+msgid "Base URL of the LINE Messaging API."
+msgstr "LINE Messaging API のベース URL。"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,help:mail_gateway_line.field_mail_gateway__line_data_api_url
+msgid ""
+"Base URL used to download the content of the received messages. LINE serves "
+"the message content from a different host than the API."
+msgstr "受信したメッセージの本体をダウンロードするためのベース URL。LINE はメッセージ本体を API とは別のホストから配信します。"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "Before you start"
+msgstr "はじめる前に"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "Connecting the webhook"
+msgstr "Webhook をつなぐ"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"Copy the <b>Channel secret</b> of the channel\n"
+"                                into the <b>Webhook secret</b> field. It is the\n"
+"                                key used to check the signature of every\n"
+"                                incoming request, and the gateway refuses to\n"
+"                                work without it."
+msgstr ""
+"チャネルの <b>Channel secret</b> を\n"
+"                                <b>Webhook secret</b> 欄にコピーします。\n"
+"                                受信するすべてのリクエストの署名を検証する\n"
+"                                鍵で、これが無いとゲートウェイは動作を\n"
+"                                拒否します。"
+
+#. module: mail_gateway_line
+#: model:ir.model,name:mail_gateway_line.model_discuss_channel
+msgid "Discussion Channel"
+msgstr "ディスカッションチャネル"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,help:mail_gateway_line.field_mail_gateway__line_download_content
+msgid ""
+"Download the images, videos, audios and files sent by the user and store "
+"them as attachments of the received message."
+msgstr "利用者が送った画像・動画・音声・ファイルをダウンロードし、受信メッセージの添付として保存します。"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "Every column of a carousel needs at least one action"
+msgstr "カルーセルのすべてのカラムに少なくとも 1 つのアクションが必要です"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "Every column of a carousel needs the same number of actions"
+msgstr "カルーセルのすべてのカラムでアクションの数を揃える必要があります"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "Filling this form"
+msgstr "この画面の入力"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,field_description:mail_gateway_line.field_mail_gateway__gateway_type
+msgid "Gateway Type"
+msgstr "ゲートウェイ種別"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "Getting a second chance at an event"
+msgstr "イベントを取りこぼさないために"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"Issue a long lived <b>Channel access token</b> and copy it into the\n"
+"                                <b>Token</b> field."
+msgstr ""
+"長期の <b>Channel access token</b> を発行し、\n"
+"                                <b>Token</b> 欄にコピーします。"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields.selection,name:mail_gateway_line.selection__mail_gateway__gateway_type__line
+msgid "LINE"
+msgstr "LINE"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "LINE Developers console"
+msgstr "LINE Developers コンソール"
+
+#. module: mail_gateway_line
+#: model:ir.model,name:mail_gateway_line.model_mail_gateway_line
+msgid "LINE Gateway services"
+msgstr "LINE ゲートウェイサービス"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "LINE configuration info"
+msgstr "LINE 設定手順"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid ""
+"LINE downloads the attachments from this server over HTTPS. Set the system "
+"parameter web.base.url to the public HTTPS address of this instance before "
+"sending an attachment."
+msgstr "LINE は添付ファイルをこのサーバから HTTPS でダウンロードします。添付を送る前に、システムパラメータ web.base.url をこのインスタンスの公開 HTTPS アドレスに設定してください。"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "LINE only loads a thumbnail served over HTTPS"
+msgstr "LINE は HTTPS で配信されるサムネイルしか読み込みません"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid ""
+"LINE shows at most %(maximum)s columns in a carousel and %(count)s were "
+"given. Use _prepare_carousel_messages to split them over several carousels."
+msgstr "LINE が 1 つのカルーセルで表示できるカラムは最大 %(maximum)s つですが、%(count)s つ渡されました。_prepare_carousel_messages で複数のカルーセルに分けてください。"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,field_description:mail_gateway_line.field_mail_gateway__line_api_url
+msgid "Line Api Url"
+msgstr "LINE API URL"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,field_description:mail_gateway_line.field_mail_gateway__line_data_api_url
+msgid "Line Data Api Url"
+msgstr "LINE データ API URL"
+
+#. module: mail_gateway_line
+#: model:ir.model.fields,field_description:mail_gateway_line.field_mail_gateway__line_download_content
+msgid "Line Download Content"
+msgstr "受信内容をダウンロードする"
+
+#. module: mail_gateway_line
+#: model:ir.model,name:mail_gateway_line.model_mail_gateway
+msgid "Mail Gateway"
+msgstr "メールゲートウェイ"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"Make sure that the URL in\n"
+"                                <b>System Parameters / web.base.url</b> is the\n"
+"                                public HTTPS address of this Odoo instance.\n"
+"                                LINE only accepts HTTPS endpoints, and it is\n"
+"                                also the address it uses to download the\n"
+"                                pictures you send."
+msgstr ""
+"<b>システムパラメータ / web.base.url</b> の URL が、この Odoo の\n"
+"                                公開 HTTPS アドレスになっていることを\n"
+"                                確認します。LINE は HTTPS のエンドポイント\n"
+"                                しか受け付けず、送信した画像の取得にも\n"
+"                                このアドレスを使います。"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"On the LINE Developers console, in the\n"
+"                                <b>Messaging API</b> tab, turn <b>Use webhook</b> on, and turn the\n"
+"                                <b>Auto-reply messages</b> and <b>Greeting messages</b> off if you want every\n"
+"                                answer to be written from Odoo."
+msgstr ""
+"LINE Developers コンソールの <b>Messaging API</b>\n"
+"                                タブで <b>Webhook の利用</b> をオンにします。\n"
+"                                回答をすべて Odoo から書くのであれば\n"
+"                                <b>応答メッセージ</b> と <b>あいさつメッセージ</b>\n"
+"                                はオフにします。"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"Press <b>Integrate Webhook</b>. The endpoint is\n"
+"                                registered on the LINE channel and the state\n"
+"                                becomes <b>Integrated</b>."
+msgstr ""
+"<b>Integrate Webhook</b> を押します。エンドポイントが\n"
+"                                LINE チャネルに登録され、状態が\n"
+"                                <b>Integrated</b> になります。"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"Press <b>Verify</b> on the console to check\n"
+"                                that LINE reaches this server."
+msgstr ""
+"コンソールで <b>検証</b> を押し、LINE から\n"
+"                                このサーバに届くことを確認します。"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "Received a %s that could not be downloaded"
+msgstr "ダウンロードできない %s を受信しました"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "Received a message of the unsupported type %s"
+msgstr "未対応の種別 %s のメッセージを受信しました"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "Save the record."
+msgstr "レコードを保存します。"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid ""
+"Set a random value of your choice in the\n"
+"                                <b>Webhook Key</b> field. It is the part of the\n"
+"                                webhook URL that identifies this gateway."
+msgstr ""
+"<b>Webhook Key</b> 欄に任意のランダムな値を\n"
+"                                設定します。この値が Webhook URL の\n"
+"                                このゲートウェイを識別する部分になります。"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "The LINE conversation is unknown"
+msgstr "LINE の会話が特定できません"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "The message holds nothing that can be sent to LINE"
+msgstr "このメッセージには LINE へ送信できる内容がありません"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid ""
+"The webhook endpoint could not be registered on LINE. The URL has to be reachable from the internet over HTTPS.\n"
+"%s"
+msgstr ""
+"Webhook のエンドポイントを LINE に登録できませんでした。URL はインターネットから HTTPS で到達できる必要があります。\n"
+"%s"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "There is nothing to send to LINE"
+msgstr "LINE へ送信するものがありません"
+
+#. module: mail_gateway_line
+#. odoo-python
+#: code:addons/mail_gateway_line/models/mail_gateway_line.py:0
+msgid "Unable to send the LINE message"
+msgstr "LINE メッセージを送信できませんでした"
+
+#. module: mail_gateway_line
+#: model_terms:ir.ui.view,arch_db:mail_gateway_line.mail_gateway_form_view
+msgid "You need a Messaging API channel on the"
+msgstr "Messaging API チャネルが必要です。作成は"
+

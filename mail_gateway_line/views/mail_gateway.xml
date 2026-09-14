@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Takahiro Sunaga
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="mail_gateway_form_view">
+        <field name="name">mail.gateway.form (in mail_gateway_line)</field>
+        <field name="model">mail.gateway</field>
+        <field name="inherit_id" ref="mail_gateway.mail_gateway_form_view" />
+        <field name="arch" type="xml">
+            <field name="webhook_user_id" position="after">
+                <field
+                    name="line_download_content"
+                    invisible="gateway_type != 'line'"
+                />
+                <field
+                    name="line_api_url"
+                    invisible="gateway_type != 'line'"
+                    groups="base.group_no_one"
+                />
+                <field
+                    name="line_data_api_url"
+                    invisible="gateway_type != 'line'"
+                    groups="base.group_no_one"
+                />
+            </field>
+            <notebook position="inside">
+                <page
+                    name="line"
+                    string="LINE configuration info"
+                    invisible="gateway_type != 'line'"
+                >
+                    <div>
+                        <h2>Before you start</h2>
+                        <p>
+                            You need a Messaging API channel on the
+                            <a
+                                href="https://developers.line.biz/console/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >LINE Developers console</a>.
+                            An existing official account can be linked to a
+                            Messaging API channel, you do not have to create a
+                            new account.
+                        </p>
+                        <h2>Filling this form</h2>
+                        <ol>
+                            <li>
+                                Copy the <b>Channel secret</b> of the channel
+                                into the <b>Webhook secret</b> field. It is the
+                                key used to check the signature of every
+                                incoming request, and the gateway refuses to
+                                work without it.
+                            </li>
+                            <li>
+                                Issue a long lived <b
+                                >Channel access token</b> and copy it into the
+                                <b>Token</b> field.
+                            </li>
+                            <li>
+                                Set a random value of your choice in the
+                                <b>Webhook Key</b> field. It is the part of the
+                                webhook URL that identifies this gateway.
+                            </li>
+                            <li>Save the record.</li>
+                        </ol>
+                        <h2>Connecting the webhook</h2>
+                        <ol>
+                            <li>
+                                Make sure that the URL in
+                                <b>System Parameters / web.base.url</b> is the
+                                public HTTPS address of this Odoo instance.
+                                LINE only accepts HTTPS endpoints, and it is
+                                also the address it uses to download the
+                                pictures you send.
+                            </li>
+                            <li>
+                                Press <b>Integrate Webhook</b>. The endpoint is
+                                registered on the LINE channel and the state
+                                becomes <b>Integrated</b>.
+                            </li>
+                            <li>
+                                On the LINE Developers console, in the
+                                <b>Messaging API</b> tab, turn <b
+                                >Use webhook</b> on, and turn the
+                                <b>Auto-reply messages</b> and <b
+                                >Greeting messages</b> off if you want every
+                                answer to be written from Odoo.
+                            </li>
+                            <li>
+                                Press <b>Verify</b> on the console to check
+                                that LINE reaches this server.
+                            </li>
+                        </ol>
+                        <h2>Getting a second chance at an event</h2>
+                        <p>
+                            An event this server could not record is only sent
+                            again if <b>Webhook redelivery</b> is turned on for
+                            the channel, on the LINE Developers console. Turn
+                            it on: an event LINE delivers twice is recognised
+                            and recorded once.
+                        </p>
+                    </div>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
